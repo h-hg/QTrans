@@ -2,7 +2,7 @@ QT += core gui network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-CONFIG += c++11
+CONFIG += c++17
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -11,13 +11,19 @@ CONFIG += c++11
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
-    translator/baidutranslator.cpp \
-    translator/translator.cpp
+    translator/googletranslator.cpp \
+    translator/onlinetranslator.cpp \
+    translator/translator.cpp \
+    translator/youdaotranslator.cpp \
+    utils/formatter.cpp
 
 HEADERS += \
     mainwindow.h \
-    translator/baidutranslator.h \
-    translator/translator.h
+    translator/googletranslator.h \
+    translator/onlinetranslator.h \
+    translator/translator.h \
+    translator/youdaotranslator.h \
+    utils/formatter.h
 
 FORMS += \
     mainwindow.ui

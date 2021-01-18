@@ -8,6 +8,7 @@
 
 class Translator : public QObject {
   Q_OBJECT
+
  public:
   enum Language {
     NoLanguage = -1,
@@ -139,18 +140,23 @@ class Translator : public QObject {
     Zulu
   };
   Q_ENUM(Language)
+
   explicit Translator(QObject *parent = nullptr) : QObject(parent){};
   virtual ~Translator() {}
+
   static QString getLanguageName(Language lang);
   static Language getLanguage(QLocale const &locale);
+
+  // interface
   virtual bool isSupportedLanguage(Language lang) = 0;
-  virtual bool isRunning() = 0;
   virtual QString getLanguageCode(Language lang) = 0;
   virtual void translate(QString const &content, Language from,
                          Language to) = 0;
+  // virtual bool isRunning() = 0;
 
  protected:
   static QMap<Language, QString> const genericLang2Code;
+
  signals:
   void finished(QString);
 };

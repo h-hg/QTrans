@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 
+#include "translator/onlinetranslator.h"
+
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -16,7 +18,12 @@ class MainWindow : public QMainWindow {
   MainWindow(QWidget *parent = nullptr);
   ~MainWindow();
 
+ private slots:
+  void on_pushButton_clicked();
+  void set_result_text(QString);
+
  private:
   Ui::MainWindow *ui;
+  OnlineTranslator *trans;
 };
 #endif  // MAINWINDOW_H

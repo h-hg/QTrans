@@ -11,6 +11,7 @@ CONFIG += c++17
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
+    translator/baidutranslator2.cpp \
     translator/googletranslator.cpp \
     translator/onlinetranslator.cpp \
     translator/translator.cpp \
@@ -19,6 +20,7 @@ SOURCES += \
 
 HEADERS += \
     mainwindow.h \
+    translator/baidutranslator2.h \
     translator/googletranslator.h \
     translator/onlinetranslator.h \
     translator/translator.h \

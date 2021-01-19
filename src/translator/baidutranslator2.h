@@ -1,13 +1,13 @@
-#ifndef YOUDAOTRANSLATOR_H
-#define YOUDAOTRANSLATOR_H
+#ifndef BAIDUTRANSLATOR2_H
+#define BAIDUTRANSLATOR2_H
 
 #include "onlinetranslator.h"
 
-class YoudaoTranslator : public OnlineTranslator {
+class BaiduTranslator2 : public OnlineTranslator {
   Q_OBJECT
  public:
-  YoudaoTranslator(QObject *parent = nullptr);
-  virtual ~YoudaoTranslator(){};
+  BaiduTranslator2(QObject *parent = nullptr);
+  virtual ~BaiduTranslator2(){};
 
   // interface inherited from Translator
   virtual bool isSupportedLanguage(Language lang);
@@ -16,7 +16,9 @@ class YoudaoTranslator : public OnlineTranslator {
 
  protected:
   static QUrl url;
-  static QMap<Language, QString> youdaoLang2Code;
+  static QMap<Language, QString> baiduLang2Code;
+
+  QString appid, sk;
 
   // interface inherited from OnlineTranslator
   virtual void request(QString const &q, QString const &from,
@@ -24,4 +26,4 @@ class YoudaoTranslator : public OnlineTranslator {
   virtual void parse(QNetworkReply *reply);
 };
 
-#endif  // YOUDAOTRANSLATOR_H
+#endif  // BAIDUTRANSLATOR2_H

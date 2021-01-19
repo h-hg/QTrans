@@ -6,8 +6,8 @@
 class GoogleTranslator : public OnlineTranslator {
   Q_OBJECT
  public:
-  GoogleTranslator(QObject *parent);
-  virtual ~GoogleTranslator() {};
+  GoogleTranslator(QObject *parent = nullptr);
+  virtual ~GoogleTranslator(){};
 
   // interface inherited from Translator
   virtual bool isSupportedLanguage(Language lang);

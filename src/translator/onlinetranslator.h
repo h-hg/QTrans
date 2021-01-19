@@ -20,7 +20,7 @@ class OnlineTranslator : public Translator {
     ParsingError
   };
 
-  OnlineTranslator(QObject *parent)
+  OnlineTranslator(QObject *parent = nullptr)
       : Translator(parent), networkAccessManger(new QNetworkAccessManager()){};
   virtual ~OnlineTranslator(){};
 

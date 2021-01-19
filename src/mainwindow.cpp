@@ -10,8 +10,8 @@
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow) {
   ui->setupUi(this);
-  trans = new YoudaoTranslator(this);
-  // trans = new GoogleTranslator(this);
+  // trans = new YoudaoTranslator(this);
+  trans = new GoogleTranslator(this);
   connect(trans, &Translator::finished, this, &MainWindow::set_result_text);
 }
 

@@ -1,0 +1,6 @@
+- .git/
+- build/
+- *.exe
+- *.o
+- *.so
+- *.dll
